@@ -19,8 +19,10 @@ function nextLetter() {
     
     document.querySelector(".typewritten").textContent = text.substring(0,n);
     n++;
-    // console.log(text.length);
+    
     if (n <= text.length) {
-        setTimeout(nextLetter, 500);
+        let randomTimer = Math.floor(Math.random() * (6 - 3) + 3);
+        console.log(randomTimer);
+        setTimeout(nextLetter, randomTimer * 100);
     }
 }
