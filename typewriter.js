@@ -19,7 +19,8 @@ function nextLetter() {
     
     document.querySelector(".typewritten").textContent = text.substring(0,n);
     n++;
-    if (n <= 44) {
+    // console.log(text.length);
+    if (n <= text.length) {
         setTimeout(nextLetter, 500);
     }
 }
